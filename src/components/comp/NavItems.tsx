@@ -1,10 +1,12 @@
 'use client';
 
 import { PRODUCT_CATEGORIES } from '@/config';
+import { useOnClickOutside } from '@/hooks/use-on-click-outside';
 import { cn } from '@/lib/utils';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { Button } from '../ui/button';
 
 type Category = (typeof PRODUCT_CATEGORIES)[number];
@@ -59,6 +61,15 @@ const NavItem = ({ category, isAnyOpen, handleOpen, isOpen }: NavItemProps) => {
                           className='object-cover object-center'
                         />
                       </div>
+
+                      <Link
+                        href={item.href}
+                        className='mt-6 block font-medium text-stone-900'>
+                        {item.name}
+                      </Link>
+                      <p className='mt-1' area-hidden='true'>
+                        Shop now
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -73,9 +84,25 @@ const NavItem = ({ category, isAnyOpen, handleOpen, isOpen }: NavItemProps) => {
 
 export default function NavItems() {
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveIndex(null);
+      }
+    };
+    document.addEventListener('keydown', (e) => handler(e));
+    return () => {
+      document.removeEventListener('keydown', handler);
+    };
+  }, []);
+
   const isAnyOpen = activeIndex !== null;
+
+  const navRef = useRef<HTMLDivElement | null>(null);
+  useOnClickOutside(navRef, () => setActiveIndex(null));
   return (
-    <div className='flex gap-4 h-full'>
+    <div className='flex gap-4 h-full' ref={navRef}>
       {PRODUCT_CATEGORIES.map((cat, i) => {
         const handleOpen = () => {
           if (activeIndex === i) {

@@ -5,7 +5,7 @@ import * as React from 'react';
 export const PlutoLogo = ({ className, ...rest }: { className?: any }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
-    viewBox='0 -20 600 600'
+    viewBox='-40 -20 600 600'
     fill='currentColor'
     {...rest}
     className={`w-16 h-auto ${className}`}>

@@ -26,7 +26,7 @@ export default function Page({ searchParams }: PageProps) {
               />
             </div>
 
-            <h3 className=' font-semibold text-2xl '>Check your email</h3>
+            <h3 className=' font-semibold text-2xl '>Check your Email</h3>
 
             {toEmail ? (
               <p className=' text-muted-foreground text-center'>

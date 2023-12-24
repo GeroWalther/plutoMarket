@@ -22,7 +22,7 @@ export default async function Navbar() {
 
               <div className=' ml-2 flex lg:ml-1'>
                 <Link href={'/'}>
-                  <PlutoLogo className='text-stone-200' />
+                  <PlutoLogo />
                 </Link>
               </div>
               <div className='hidden z-50 lg:ml-6 lg:block lg:self-stretch'>

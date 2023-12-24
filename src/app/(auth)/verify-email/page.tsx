@@ -23,7 +23,7 @@ export default function Page({ searchParams }: PageProps) {
           <div className='flex h-full items-center flex-col justify-center space-y-1 '>
             <div className='relative mb-4 h-60 w-60 text-muted-foreground'>
               <Image
-                src='/emptyCart.png'
+                src={process.env.NEXT_PUBLIC_SERVER_URL + '/email.jpg'}
                 fill
                 alt='pluto market email sent image'
               />

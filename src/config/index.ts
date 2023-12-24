@@ -1,3 +1,47 @@
+// export const PRODUCT_CATEGORIES = [
+//   {
+//     label: 'UI Kits',
+//     value: 'ui_kits' as const,
+//     featured: [
+//       {
+//         name: 'Editor picks',
+//         href: '#',
+//         ImageSrc: '/nav/ui-kits/mixed.jpg',
+//       },
+//       {
+//         name: 'New Arrivals',
+//         href: '#',
+//         ImageSrc: '/nav/ui-kits/blue.jpg',
+//       },
+//       {
+//         name: 'Best Sellers',
+//         href: '#',
+//         ImageSrc: '/nav/ui-kits/purple.jpg',
+//       },
+//     ],
+//   },
+//   {
+//     label: 'Icons',
+//     value: 'icons' as const,
+//     featured: [
+//       {
+//         name: 'Favorite Icon Picks',
+//         href: '#',
+//         ImageSrc: '/nav/icons/picks.jpg',
+//       },
+//       {
+//         name: 'New Arrivals',
+//         href: '#',
+//         ImageSrc: '/nav/icons/new.jpg',
+//       },
+//       {
+//         name: 'Best selling Icons',
+//         href: '#',
+//         ImageSrc: '/nav/icons/bestsellers.jpg',
+//       },
+//     ],
+//   },
+// ];
 export const PRODUCT_CATEGORIES = [
   {
     label: 'UI Kits',
@@ -6,17 +50,18 @@ export const PRODUCT_CATEGORIES = [
       {
         name: 'Editor picks',
         href: '#',
-        ImageSrc: '/nav/ui-kits/mixed.jpg',
+        ImageSrc: process.env.NEXT_PUBLIC_SERVER_URL + '/nav/ui-kits/mixed.jpg',
       },
       {
         name: 'New Arrivals',
         href: '#',
-        ImageSrc: '/nav/ui-kits/blue.jpg',
+        ImageSrc: process.env.NEXT_PUBLIC_SERVER_URL + '/nav/ui-kits/blue.jpg',
       },
       {
         name: 'Best Sellers',
         href: '#',
-        ImageSrc: '/nav/ui-kits/purple.jpg',
+        ImageSrc:
+          process.env.NEXT_PUBLIC_SERVER_URL + '/nav/ui-kits/purple.jpg',
       },
     ],
   },
@@ -27,17 +72,18 @@ export const PRODUCT_CATEGORIES = [
       {
         name: 'Favorite Icon Picks',
         href: '#',
-        ImageSrc: '/nav/icons/picks.jpg',
+        ImageSrc: process.env.NEXT_PUBLIC_SERVER_URL + '/nav/icons/picks.jpg',
       },
       {
         name: 'New Arrivals',
         href: '#',
-        ImageSrc: '/nav/icons/new.jpg',
+        ImageSrc: process.env.NEXT_PUBLIC_SERVER_URL + '/nav/icons/new.jpg',
       },
       {
         name: 'Best selling Icons',
         href: '#',
-        ImageSrc: '/nav/icons/bestsellers.jpg',
+        ImageSrc:
+          process.env.NEXT_PUBLIC_SERVER_URL + '/nav/icons/bestsellers.jpg',
       },
     ],
   },

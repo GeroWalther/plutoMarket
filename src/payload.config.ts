@@ -3,16 +3,20 @@ import { slateEditor } from '@payloadcms/richtext-slate';
 import { webpackBundler } from '@payloadcms/bundler-webpack';
 import { buildConfig } from 'payload/config';
 import path from 'path';
+
 import { Users } from './collections/users';
+import { Products } from './collections/Products/Products';
+import { Media } from './collections/Media';
 
 import dotenv from 'dotenv';
+
 dotenv.config({
   path: path.resolve(__dirname, '../.env'),
 });
 
 export default buildConfig({
   serverURL: process.env.NEXT_PUBLIC_SERVER_URL || '',
-  collections: [Users],
+  collections: [Users, Products, Media],
   routes: {
     admin: '/sell',
   },
@@ -20,7 +24,7 @@ export default buildConfig({
     user: 'users',
     bundler: webpackBundler(),
     meta: {
-      titleSuffix: '- PlutoSpot',
+      titleSuffix: '- PlutoMarket',
       favicon: '/favicon.ico',
       ogImage: '/thumbnail.jpg',
     },

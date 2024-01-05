@@ -1,4 +1,5 @@
 import MaxWidthWrapper from '@/components/comp/MaxWidthWrapper';
+import ProductReel from '@/components/comp/ProductReel';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { CheckCircle, TimerResetIcon, Waves } from 'lucide-react';
 import Link from 'next/link';
@@ -26,8 +27,8 @@ const perks = [
 export default function Home() {
   return (
     <>
-      <MaxWidthWrapper className='py-8 sm:py-36'>
-        <div className='mx-auto text-center flex flex-col items-center max-w-3xl'>
+      <MaxWidthWrapper className='py-8 sm:py-15 '>
+        <div className='py-8 mx-auto text-center flex flex-col items-center max-w-3xl'>
           <h1 className='sm:mb-8 text-4xl font-bold tracking-tight text-stone-700 sm:text-6xl '>
             Your marketplace for high-quality{' '}
             <span className='text-stone-400'>digital assets</span>.
@@ -43,7 +44,11 @@ export default function Home() {
             <Button variant='outline'>Our quality promite &rarr;</Button>
           </div>
         </div>
-        {/* TODO: List products */}
+        <ProductReel
+          href='/products'
+          title='New in!'
+          query={{ sort: 'desc', limit: 4 }}
+        />
       </MaxWidthWrapper>
       <section className=' border-t border-stone-200 bg-stone-50'>
         <MaxWidthWrapper className='py-8'>

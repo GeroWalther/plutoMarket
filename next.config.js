@@ -8,6 +8,11 @@ const nextConfig = {
         port: '3001',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: process.env.NEXT_PUBLIC_SERVER_URL.split('https://')[1] || '',
+        pathname: '/**',
+      },
     ],
   },
   // typescript: {

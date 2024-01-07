@@ -3,7 +3,6 @@ import { AuthCredentialsValidator } from '../lib/validators/account-credentials-
 import { TRPCError } from '@trpc/server';
 import { publicProcedure, router } from './trpc';
 import { z } from 'zod';
-import payload from 'payload';
 
 export const authRouter = router({
   createPayloadUser: publicProcedure

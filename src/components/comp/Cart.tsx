@@ -18,6 +18,7 @@ import { useCart } from '@/hooks/use-cart';
 import { ScrollArea } from '../ui/scroll-area';
 import CartItem from './CartItem';
 import { useEffect, useState } from 'react';
+import { FEE } from '@/config';
 
 export default function Cart() {
   const { items } = useCart();
@@ -28,13 +29,12 @@ export default function Cart() {
   }, []);
 
   const itemCount = items.length;
+  const totalTransFee = FEE * itemCount;
 
-  const cartTotal = items.reduce(
+  const cartItemTotal = items.reduce(
     (total, { product }) => total + product.price,
     0
   );
-
-  const fee = 1;
 
   return (
     <Sheet>
@@ -54,13 +54,13 @@ export default function Cart() {
         </SheetHeader>
         {itemCount > 0 ? (
           <>
-            <div className='flex w-full flex-col pr-6'>
-              <ScrollArea>
+            <ScrollArea>
+              <div className='flex w-full flex-col pr-6'>
                 {items.map(({ product }) => (
                   <CartItem key={product.id} product={product} />
                 ))}
-              </ScrollArea>
-            </div>
+              </div>
+            </ScrollArea>
             <div className='space-y-4 pr-6'>
               <Separator />
               <div className='space-y-1-5 text-sm'>
@@ -70,11 +70,11 @@ export default function Cart() {
                 </div>
                 <div className='flex'>
                   <span className='flex-1'>Transaction Fee</span>
-                  <span>{formatPrice(fee)}</span>
+                  <span>{formatPrice(totalTransFee)}</span>
                 </div>
                 <div className='flex'>
                   <span className='flex-1'>Total</span>
-                  <span>{formatPrice(cartTotal + fee)}</span>
+                  <span>{formatPrice(cartItemTotal + totalTransFee)}</span>
                 </div>
               </div>
               <SheetFooter>

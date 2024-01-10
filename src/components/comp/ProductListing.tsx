@@ -7,7 +7,6 @@ import { cn, formatPrice } from '@/lib/utils';
 import { PRODUCT_CATEGORIES } from '@/config';
 import { Skeleton } from '../ui/skeleton';
 import ImageSlider from './ImageSlider';
-//import ImageSlider from './ImageSlider';
 
 interface ProductListingProps {
   product: Product | null;

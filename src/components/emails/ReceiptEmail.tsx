@@ -48,7 +48,7 @@ export const ReceiptEmail = ({
           <Section>
             <Column>
               <Img
-                src={`${process.env.NEXT_PUBLIC_SERVER_URL}/email.png`}
+                src={`${process.env.NEXT_PUBLIC_SERVER_URL}/eis.png`}
                 width='100'
                 height='100'
                 alt='Pluto Market'

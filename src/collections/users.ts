@@ -1,4 +1,4 @@
-import { PrimaryActionEmailHtml } from '@/components/emails/PrimaryActionEmail';
+import { PrimaryActionEmailHtml } from '../components/emails/PrimaryActionEmail';
 import { CollectionConfig, Access } from 'payload/types';
 
 const adminsAndUser: Access = ({ req: { user } }) => {

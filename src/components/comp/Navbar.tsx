@@ -97,8 +97,7 @@ import Cart from './Cart';
 import { getServerSideUser } from '@/lib/payload-utils';
 import { cookies } from 'next/headers';
 import UserAccountNav from './UserAccountNav';
-
-// import MobileNav from './MobileNav';
+import MobileNav from './MobilNav';
 
 const Navbar = async () => {
   const nextCookies = cookies();
@@ -110,12 +109,13 @@ const Navbar = async () => {
         <MaxWidthWrapper>
           <div className='border-b border-stone-200'>
             <div className='flex h-16 items-center'>
-              {/* <MobileNav /> */}
-
-              <div className='ml-4 flex lg:ml-0'>
-                <Link href='/'>
-                  <PlutoLogo />
-                </Link>
+              <div className='flex justify-between w-full mr-6'>
+                <div className='ml-4 flex lg:ml-0'>
+                  <Link href='/'>
+                    <PlutoLogo />
+                  </Link>
+                </div>
+                <MobileNav />
               </div>
 
               <div className='hidden z-50 lg:ml-8 lg:block lg:self-stretch'>

@@ -23,10 +23,10 @@ const ProductsPage = ({ searchParams }: ProductsPageProps) => {
   return (
     <MaxWidthWrapper>
       <ProductReel
-        title={label ?? 'Browse high-quality assets'}
+        title={label ?? 'Browse all high-quality assets'}
         query={{
           category,
-          limit: 40,
+          limit: 50,
           sort: sort === 'desc' || sort === 'asc' ? sort : undefined,
         }}
       />

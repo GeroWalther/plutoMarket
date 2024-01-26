@@ -42,8 +42,8 @@ export const getPayloadClient = async ({
     cached.promise = payload.init({
       email: {
         transport: transporter,
-        //to send to own email  'onboarding@resend.dev',
-        fromAddress: 'office@gw-intech.com',
+        //to send to own email  'onboarding@resend.dev', office@gw-intech.com
+        fromAddress: 'onboarding@resend.dev',
         fromName: 'PlutoMarket',
       },
       secret: process.env.PAYLOAD_SECRET,

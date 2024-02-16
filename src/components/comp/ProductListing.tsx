@@ -32,11 +32,7 @@ const ProductListing = ({ product, index }: ProductListingProps) => {
 
   const validUrls = product.images
     .map(({ image }) =>
-      typeof image === 'string'
-        ? image
-        : image && image.url
-        ? '/' + process.env.NEXT_PUBLIC_SERVER_URL + image.url
-        : null
+      typeof image === 'string' ? image : image && image.url ? image.url : null
     )
     .filter(Boolean) as string[];
 

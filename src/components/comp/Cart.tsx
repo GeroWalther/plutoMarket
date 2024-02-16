@@ -96,9 +96,7 @@ export default function Cart() {
               aria-hidden='true'
               className='relative mb-4 h-60 w-60 text-muted-foreground'>
               <Image
-                src={
-                  '/' + process.env.NEXT_PUBLIC_SERVER_URL + '/emptyCart.png'
-                }
+                src={process.env.NEXT_PUBLIC_SERVER_URL + '/emptyCart.png'}
                 fill
                 alt='empty shopping cart image'
               />

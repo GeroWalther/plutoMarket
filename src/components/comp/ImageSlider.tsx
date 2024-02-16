@@ -24,7 +24,7 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
   });
 
   useEffect(() => {
-    swiper?.on('slideChange', ({ activeIndex }) => {
+    swiper?.on('slideChange', ({ activeIndex }: any) => {
       setActiveIndex(activeIndex);
       setSlideConfig({
         isBeginning: activeIndex === 0,
@@ -70,11 +70,11 @@ const ImageSlider = ({ urls }: ImageSliderProps) => {
 
       <Swiper
         pagination={{
-          renderBullet: (_, className) => {
+          renderBullet: (_: any, className: any) => {
             return `<span class="rounded-full transition ${className}"></span>`;
           },
         }}
-        onSwiper={(swiper) => setSwiper(swiper)}
+        onSwiper={(swiper: any) => setSwiper(swiper)}
         spaceBetween={50}
         modules={[Pagination]}
         slidesPerView={1}

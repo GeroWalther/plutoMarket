@@ -55,7 +55,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
       <div className='hidden lg:block h-80 overflow-hidden lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12'>
         <Image
           fill
-          src={'/' + process.env.NEXT_PUBLIC_SERVER_URL + '/eis.jpg'}
+          src={'/eis.jpg'}
           className='h-full w-full object-cover object-center'
           alt='thank you for your order'
         />
@@ -111,11 +111,7 @@ export default async function ThankYouPage({ searchParams }: PageProps) {
                         {typeof image !== 'string' && image.url ? (
                           <Image
                             fill
-                            src={
-                              '/' +
-                              process.env.NEXT_PUBLIC_SERVER_URL +
-                              image.url
-                            }
+                            src={image.url}
                             alt={`${product.name} image`}
                             className='flex-none rounded-md bg-stone-100 object-cover object-center'
                           />

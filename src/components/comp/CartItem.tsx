@@ -19,7 +19,7 @@ export default function CartItem({ product }: { product: Product }) {
           <div className='relative aspect-square h-16 w-16 min-w-fit overflow-hidden rounded'>
             {typeof image !== 'string' && image.url ? (
               <Image
-                src={process.env.NEXT_PUBLIC_SERVER_URL + image.url}
+                src={'/' + process.env.NEXT_PUBLIC_SERVER_URL + image.url}
                 alt={product.name}
                 fill
                 className='absolute object-cover'

@@ -49,7 +49,7 @@ export default async function page({ params }: PageProps) {
       typeof image === 'string'
         ? image
         : image && image.url
-        ? process.env.NEXT_PUBLIC_SERVER_URL + image.url
+        ? '/' + process.env.NEXT_PUBLIC_SERVER_URL + image.url
         : null
     )
     .filter(Boolean) as string[];

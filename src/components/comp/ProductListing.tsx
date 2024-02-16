@@ -35,7 +35,7 @@ const ProductListing = ({ product, index }: ProductListingProps) => {
       typeof image === 'string'
         ? image
         : image && image.url
-        ? process.env.NEXT_PUBLIC_SERVER_URL + image.url
+        ? '/' + process.env.NEXT_PUBLIC_SERVER_URL + image.url
         : null
     )
     .filter(Boolean) as string[];

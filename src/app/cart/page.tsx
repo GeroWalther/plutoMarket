@@ -58,7 +58,11 @@ export default function Page() {
                   aria-hidden='true'
                   className='relative mb-4 h-40 w-40 text-muted-foreground'>
                   <Image
-                    src={process.env.NEXT_PUBLIC_SERVER_URL + '/emptyCart.png'}
+                    src={
+                      '/' +
+                      process.env.NEXT_PUBLIC_SERVER_URL +
+                      '/emptyCart.png'
+                    }
                     fill
                     loading='eager'
                     alt='empty shopping cart'
@@ -92,7 +96,9 @@ export default function Page() {
                             <Image
                               fill
                               src={
-                                process.env.NEXT_PUBLIC_SERVER_URL + image.url
+                                '/' +
+                                process.env.NEXT_PUBLIC_SERVER_URL +
+                                image.url
                               }
                               alt='product image'
                               className='h-full w-full rounded-md object-cover object-center sm:h-48 sm:w-48'

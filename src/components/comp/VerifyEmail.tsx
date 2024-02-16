@@ -30,7 +30,13 @@ export default function VerifyEmail({ token }: VerifyEmailProps) {
     return (
       <div className=' flex h-full flex-col items-center justify-center'>
         <div className=' required: mb-4 h-60 w-60 text-muted-foreground'>
-          <Image src='/hippo-empty-cart.png' fill alt='the email was sent' />
+          <Image
+            src={
+              '/' + process.env.NEXT_PUBLIC_SERVER_URL + '/hippo-empty-cart.png'
+            }
+            fill
+            alt='the email was sent'
+          />
         </div>
 
         <h3 className=' font-semibold text-2xl'>You&apos;re all set!</h3>

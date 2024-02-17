@@ -63,7 +63,8 @@ const start = async () => {
   app.use('/cart', cartRouter);
 
   if (process.env.NODE_BUILD) {
-    app.listen(PORT, async () => {
+    // added , "0.0.0.0"
+    app.listen(PORT, '0.0.0.0', async () => {
       payload.logger.info('Next.js is building for production.');
 
       //@ts-expect-error

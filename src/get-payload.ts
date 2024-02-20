@@ -43,7 +43,7 @@ export const getPayloadClient = async ({
       email: {
         transport: transporter,
         //to send to own email  'onboarding@resend.dev', office@gw-intech.com
-        fromAddress: 'onboarding@resend.dev',
+        fromAddress: 'office@gw-intech.com',
         fromName: 'PlutoMarket',
       },
       secret: process.env.PAYLOAD_SECRET,

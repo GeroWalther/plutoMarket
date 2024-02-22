@@ -91,7 +91,7 @@ var getPayloadClient = function (_a) {
                         cached.promise = payload_1.default.init(__assign({ email: {
                                 transport: transporter,
                                 //to send to own email  'onboarding@resend.dev', office@gw-intech.com
-                                fromAddress: 'onboarding@resend.dev',
+                                fromAddress: 'office@gw-intech.com',
                                 fromName: 'PlutoMarket',
                             }, secret: process.env.PAYLOAD_SECRET, local: (initOptions === null || initOptions === void 0 ? void 0 : initOptions.express) ? false : true }, (initOptions || {})));
                     }

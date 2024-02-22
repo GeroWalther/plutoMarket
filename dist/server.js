@@ -116,6 +116,7 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                 });
                 app.use('/cart', cartRouter);
                 if (process.env.NODE_BUILD) {
+                    // added , "0.0.0.0"
                     app.listen(PORT, '0.0.0.0', function () { return __awaiter(void 0, void 0, void 0, function () {
                         return __generator(this, function (_a) {
                             switch (_a.label) {
@@ -126,7 +127,6 @@ var start = function () { return __awaiter(void 0, void 0, void 0, function () {
                                 case 1:
                                     //@ts-expect-error
                                     _a.sent();
-                                    process.exit();
                                     return [2 /*return*/];
                             }
                         });
